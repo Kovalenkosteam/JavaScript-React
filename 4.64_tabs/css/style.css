@@ -715,12 +715,12 @@ a {
 	margin: 0 auto
 }
 
-.hide {
-	display: none;
+.show {
+	display: block
 }
 
-.show {
-	display: block;
+.hide {
+	display: none
 }
 
 .fade {
@@ -730,7 +730,7 @@ a {
 
 @keyframes fade {
 	from {
-		opacity: 0.3;
+		opacity: 0.1;
 	}
 
 	to {
