@@ -3,3 +3,6 @@ git add-A //добавить все файлы
 .git/worktrees/*/index.lock//если не добавляется
 git commit -m"first"
 git push -u origin main
+
+
+npx json-server db.json запуск локального сервера

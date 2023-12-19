@@ -70,7 +70,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	function setClock(selector, endtime) {
 
 		const timer = document.querySelector(selector),
-			days = timer.querySelector("#days"),
+			days = timer.querySelector('#days'),
 			hours = timer.querySelector('#hours'),
 			minutes = timer.querySelector('#minutes'),
 			seconds = timer.querySelector('#seconds'),
@@ -117,13 +117,13 @@ window.addEventListener('DOMContentLoaded', function () {
 	}
 
 	modal.addEventListener('click', (e) => {
-		if (e.target === modal || e.target.getAttribute('data-close') == "") {
+		if (e.target === modal || e.target.getAttribute('data-close') == '') {
 			closeModal();
 		}
 	});
 
 	document.addEventListener('keydown', (e) => {
-		if (e.code === "Escape" && modal.classList.contains('show')) {
+		if (e.code === 'Escape' && modal.classList.contains('show')) {
 			closeModal();
 		}
 	});
@@ -162,7 +162,7 @@ window.addEventListener('DOMContentLoaded', function () {
 			const element = document.createElement('div');
 
 			if (this.classes.length === 0) {
-				this.classes = "menu__item";
+				this.classes = 'menu__item';
 				element.classList.add(this.classes);
 			} else {
 				this.classes.forEach(className => element.classList.add(className));
@@ -284,7 +284,7 @@ window.addEventListener('DOMContentLoaded', function () {
 					showThanksModal(message.failure);
 				}).finally(() => {
 					form.reset();
-				})
+				});
 
 		});
 	}
@@ -320,20 +320,20 @@ window.addEventListener('DOMContentLoaded', function () {
 	const next = document.querySelector('.offer__slider-next');
 	const total = document.querySelector('#total');
 	const current = document.querySelector('#current');
-	const slider = document.querySelector('.offer__slider')
+	const slider = document.querySelector('.offer__slider');
 	let slideIndex = 1;
 	const slidesWrapper = document.querySelector('.offer__slider-wrapper');
 	const slidesField = document.querySelector('.offer__slider-inner');
 	let offset = 0;
-	width = window.getComputedStyle(slidesWrapper).width;
+	let width = window.getComputedStyle(slidesWrapper).width;
 	let dots = [];
 
 	if (slides.length < 10) {
-		total.textContent = `0${slides.length}`
-		current.textContent = `0${slideIndex}`
+		total.textContent = `0${slides.length}`;
+		current.textContent = `0${slideIndex}`;
 	} else {
-		total.textContent = `${slides.length}`
-		current.textContent = `${slideIndex}`
+		total.textContent = `${slides.length}`;
+		current.textContent = `${slideIndex}`;
 	}
 
 
@@ -354,7 +354,7 @@ window.addEventListener('DOMContentLoaded', function () {
 	for (let i = 0; i < slides.length; i++) {
 		const dot = document.createElement('li');
 		dot.setAttribute('data-slide-to', i + 1);
-		dot.classList.add('dot')
+		dot.classList.add('dot');
 		indicators.append(dot);
 		dots.push(dot);
 		if (i == 0) {
@@ -362,15 +362,20 @@ window.addEventListener('DOMContentLoaded', function () {
 		}
 	}
 
+
+	function deleteNotDigits(str){
+		return+str.replace(/\D/g,'');
+	}
+
 	next.addEventListener('click', () => {
 
-		if (offset == +width.slice(0, width.length - 2) * (slides.length - 1)) {
+		if (offset == deleteNotDigits(width) * (slides.length - 1)) {
 			offset = 0;
 		} else {
-			offset += +width.slice(0, width.length - 2)
+			offset += deleteNotDigits(width);
 		}
 
-		slidesField.style.transform = `translatex(-${offset}px)`
+		slidesField.style.transform = `translatex(-${offset}px)`;
 
 		if (slideIndex == slides.length) {
 			slideIndex = 1;
@@ -379,9 +384,9 @@ window.addEventListener('DOMContentLoaded', function () {
 		}
 
 		if (slides.length < 10) {
-			current.textContent = `0${slideIndex}`
+			current.textContent = `0${slideIndex}`;
 		} else {
-			current.textContent = `${slideIndex}`
+			current.textContent = `${slideIndex}`;
 		}
 
 		dots.forEach(dots => dots.style.opacity = 0.5);
@@ -390,12 +395,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	});
 
-	prev.addEventListener("click", () => {
+	prev.addEventListener('click', () => {
 
 		if (offset == 0) {
-			offset = +width.slice(0, width.length - 2) * (slides.length - 1);
+			offset = deleteNotDigits(width) * (slides.length - 1);
 		} else {
-			offset -= +width.slice(0, width.length - 2);
+			offset -= deleteNotDigits(width);
 		}
 
 		slidesField.style.transform = `translateX(-${offset}px)`;
@@ -418,9 +423,9 @@ window.addEventListener('DOMContentLoaded', function () {
 
 	dots.forEach(dot => {
 		dot.addEventListener('click', (e) => {
-			const slideTo = e.target.getAttribute('data-slide-to')
+			const slideTo = e.target.getAttribute('data-slide-to');
 			slideIndex = slideTo;
-			offset = +width.slice(0, width.length - 2) * (slideTo - 1);
+			offset = deleteNotDigits(width) * (slideTo - 1);
 			slidesField.style.transform = `translateX(-${offset}px)`;
 			if (slides.length < 10) {
 				current.textContent = `0${slideIndex}`;
