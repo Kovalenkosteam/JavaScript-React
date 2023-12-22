@@ -61,3 +61,4 @@ const  ivan=new User('Ivan',27);
 console.log(ivan.surname);
 console.log(ivan._age);
 ivan.say();
+  
