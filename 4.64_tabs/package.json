@@ -1,6 +1,7 @@
 {
-  "name": "tabs",
+  "name": "food",
   "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -8,10 +9,6 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "json-server": "^0.17.3",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4"
-  },
-  "keywords": [],
-  "description": ""
+    "json-server": "^0.16.1"
+  }
 }
