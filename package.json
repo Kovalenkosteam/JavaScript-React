@@ -88,6 +88,7 @@
     "isexe": "^2.0.0",
     "isobject": "^3.0.1",
     "jest-worker": "^27.5.1",
+    "jquery": "^3.7.1",
     "js-sdsl": "^4.4.0",
     "js-yaml": "^4.1.0",
     "json-parse-even-better-errors": "^2.3.1",
