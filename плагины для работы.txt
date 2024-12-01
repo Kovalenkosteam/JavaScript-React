@@ -1,0 +1,11 @@
+All Autocomplete
+Auto Complete Tag
+Code Runner
+Import Cost
+JavaScript (ES6) code snippets
+Live Server
+Multiple clipboards for VSCode
+Reactjs code snippets
+Sass
+Theme - Oceanic Next
+vscode-icons

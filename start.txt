@@ -1,0 +1,14 @@
+npm init- инициализация npm в данной папке 
+npm init @eslint/config@latest установка esLint
+npm init @eslint/config
+git init - инициализация гита в данном проекте
+git config --local user.name "kovalenkosteam" 
+git config --local user.email "kovalenkosteam@gmail.com" 
+git status
+git add -A
+git commit -a -m"gitFirst"
+git log
+
+git remote add origin https://github.com/Kovalenkosteam/JavaScript-React.git - связка репозитория с локальным
+git branch -M main
+git push -u origin main
