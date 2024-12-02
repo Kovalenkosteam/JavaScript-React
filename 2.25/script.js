@@ -28,3 +28,23 @@ logger();
 стрелочная функция
 const calcul=(a,b)=>a+b;
 const calcul=(a,b)=>{return a+b};
+// ----------------------------------
+
+const usdCurr=100;
+const eurCurr=110;
+function convert(amount, curr){
+    let convertSum=amount*curr;
+    return convertSum;
+}
+
+console.log(convert(30,usdCurr));
+console.log(convert(4,eurCurr));
+// -----------------------------
+function test(){
+    for(let i=0;i<5;i++){
+        console.log(i);
+        // if(i===3) return
+    }
+    console.log('done');
+}
+test();
