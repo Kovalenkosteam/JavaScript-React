@@ -1,17 +1,28 @@
-const numberOfFilms= +prompt('Сколько фильмов просмотрено?', '');
+const numberOfFilms = +prompt('Сколько фильмов просмотрено?', '');
 
-const personalMovieDB={
-    count:numberOfFilms,
-    movies:{},
-    actors:{},
-    genres:[],
-    privat:false
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
 };
 
-const a= prompt('Какой последний фильм сторел?');
-const b= prompt('оцени его');
-const c= prompt('Какой последний фильм сторел?');
-const d= prompt('оцени его');
-personalMovieDB.movies.a=b;// так бывают лаги при выводе информации. лучше в []
-personalMovieDB.movies[c]=d;
+for (let i = 0; i < 2; i++) {
+    const a = prompt('Какой последний фильм сторел?', '');
+    const b = prompt('оцени его', '');
+    if (a != null && b != null & a != '' && b != '' && a.length < 50) {
+        personalMovieDB.movies[a] = b;
+    } else {
+        i--;
+    }
+}
+
+if (personalMovieDB.count < 10) {
+    console.log('мало');
+} else if (personalMovieDB.count > 10 && personalMovieDB.count < 30) {
+    console.log('средне');
+} else {
+    console.log('ебать много')
+}
 console.log(personalMovieDB);
