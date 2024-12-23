@@ -92,3 +92,6 @@ symbol
 //wtitable
 //enumerate
 //configurable
+
+3.58
+итерируемые конструкции salaries[Symbol.iterator]-перебор объектов
