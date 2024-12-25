@@ -11,3 +11,8 @@ git log
 git remote add origin https://github.com/Kovalenkosteam/JavaScript-React.git - связка репозитория с локальным
 git branch -M main
 git push -u origin main
+
+//меняет имя последнего комита
+git commit --amend -m "4.63"
+git push --force
+//
