@@ -113,3 +113,6 @@ classlist и делегирование событий
 
 4.65
 setTimeout и setInterval
+
+4.67
+WeakMap WeakSet
