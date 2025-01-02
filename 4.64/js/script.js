@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
 
-
+    //Tabs
     const tabsParent = document.querySelector('.tabheader__items');
     const tabs = document.querySelectorAll('.tabheader__item');
     const tabsContent = document.querySelectorAll('.tabcontent');
@@ -14,7 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
             item.classList.remove('tabheader__item_active');
         })
     };
-
 
     function showTabContent(i = 0) {
         tabsContent[i].classList.remove('hide');
@@ -38,11 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
     })
 
 
-
-
-
-
-
+    //timer
     const deadline = '2025-06-11';
 
     function getTimeRemaining(endtime) {
@@ -105,5 +100,40 @@ window.addEventListener('DOMContentLoaded', () => {
     }
 
     setClock('.timer', deadline);
+
+
+    //modal
+    const modalTrigger = document.querySelectorAll('[data-modal]');
+    const modal = document.querySelector('.modal');
+    const modalCloseBtn = document.querySelector('[data-close]');
+
+    modalTrigger.forEach((item) => {
+        item.addEventListener('click', () => {
+            modal.classList.add('show');
+            modal.classList.remove('hide');
+            document.body.style.overflow = 'hidden';
+        })
+    })
+
+    function closeModal() {
+        modal.classList.add('hide');
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+    }
+
+    modalCloseBtn.addEventListener('click', closeModal)
+
+    modal.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            closeModal()
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.code === 'Escape' && modal.classList.contains('show')) {
+            closeModal()
+        }
+    });
+
 
 });
