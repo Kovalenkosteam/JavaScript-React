@@ -283,5 +283,7 @@ window.addEventListener('DOMContentLoaded', function () {
         }, 5000);
     }
 
-
+    fetch('db.json')
+    .then(data=>data.json())
+    .then(res=>console.log(res))
 }); 

@@ -16,3 +16,7 @@ git push -u origin main
 git commit --amend -m "4.63"
 git push --force
 //
+
+npm i json-server -g //установка json сервера глобально(локально без -g)
+npm i json-server --save-dev
+json-server D:\Programm_installed\OSPanel\domains\server\4.64\db.json запуск json-server
