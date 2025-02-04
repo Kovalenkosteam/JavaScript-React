@@ -20,3 +20,8 @@ git push --force
 npm i json-server -g //установка json сервера глобально(локально без -g)
 npm i json-server --save-dev
 json-server D:\Programm_installed\OSPanel\domains\server\4.64\db.json запуск json-server
+
+
+npm install --global webpack установка глобально
+webpack.config должен быть в проекте
+npx webpack запуск 
