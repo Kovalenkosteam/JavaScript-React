@@ -25,3 +25,9 @@ json-server D:\Programm_installed\OSPanel\domains\server\4.64\db.json запус
 npm install --global webpack установка глобально
 webpack.config должен быть в проекте
 npx webpack запуск 
+
+npm install --save-dev @babel/core @babel/cli @babel/preset-env   установка Babel(делает проект для древних браузеров)
+--save-dev работа только на этапе разработки
+npm install --save @babel/polyfill
+npm i --save-dev babel-loader
+npm i --save-dev core-js       
