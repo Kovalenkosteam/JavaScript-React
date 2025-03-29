@@ -25,6 +25,8 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "jquerry": "^0.0.1-security",
+    "jquery": "^3.7.1",
     "webpack": "^5.97.1"
   }
 }
