@@ -34,21 +34,38 @@
 
 
 const btn = document.querySelector('.btn');
+const elem = document.querySelector('.box');
+let pos = 0;
 
-function myAnimation(){
-    const elem=document.querySelector('.box');
-    let pos=0;
+// function myAnimation(){
+//     setInterval(frame,80)
+//     function frame(){
+//         if(pos==300){
+//             clearInterval();
+//         }else{
+//             pos++;
+//             elem.style.top=pos+'px';
+//             elem.style.left=pos+'px';
+//         }        
+//     }
+// };
+// btn.addEventListener('click', myAnimation);
 
-    setInterval(frame,10)
-    function frame(){
-        if(pos==300){
-            clearInterval();
-        }else{
-            pos++;
-            elem.style.top=pos+'px';
-            elem.style.left=pos+'px';
-        }        
+
+
+function myAnimation() {
+    pos++;
+    elem.style.top = pos + 'px';
+    elem.style.left = pos + 'px';
+
+    if (pos < 300) {
+        requestAnimationFrame(myAnimation)
     }
 };
-
+// btn.addEventListener('click', ()=> requestAnimationFrame(myAnimation));
 btn.addEventListener('click', myAnimation);
+
+btn.addEventListener('mouseleave', () => {
+    cancelAnimationFrame(myAnimation);
+    console.log('dscf')
+});
