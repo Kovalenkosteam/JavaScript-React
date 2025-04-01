@@ -244,3 +244,6 @@ requestAnimationframe. Правильная работа анимации в 4.6
 
 5.113
 webAnimationAPI управление анимацией
+
+5.116
+tiny-slider кода нет, при случае гоянуть
